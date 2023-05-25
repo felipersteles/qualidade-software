@@ -20,3 +20,9 @@ O objetivo inicial deste teste é ter uma maior noção do problema, isto é, um
 2. deveInserirNotas()
 3. deveCalcularMedia()
 4. deveInserirUmaQuartaNotaECalcularNovaMedia()
+
+## Resultados
+
+Aparentemente positivos e inclusive dando possibilidade de ideia para a implementação de algoritmos
+
+![image1](./assets/image1.png)
