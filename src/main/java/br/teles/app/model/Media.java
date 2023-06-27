@@ -1,7 +1,9 @@
 package br.teles.app.model;
 
+import java.util.Scanner;
+
 public class Media {
-    private Float[] notas;
+    private Float[] notas = new Float[3];
     private Float nota4;
 
     public Media() {
@@ -45,8 +47,13 @@ public class Media {
         return this.notas;
     }
 
-    public void setNotas(Float[] notas) {
-        this.notas = notas;
+    public void inserirNotas(Scanner sc) {
+        System.out.println("Digite as notas:");
+        this.notas[0] = sc.nextFloat();
+        this.notas[1] = sc.nextFloat();
+        this.notas[2] = sc.nextFloat();
+
+        System.out.println(this.toString());
     }
 
     public Float getNota4() {
@@ -60,10 +67,10 @@ public class Media {
     @Override
     public String toString() {
         return "{" +
-                " nota1='" + getNotas()[0] + "'" +
-                " nota2='" + getNotas()[1] + "'" +
-                " nota3='" + getNotas()[2] + "'" +
-                "}";
+                " nota1= " + getNotas()[0] +
+                ", nota2= " + getNotas()[1]  +
+                ", nota3= " + getNotas()[2] +
+                " }";
     }
 
 }

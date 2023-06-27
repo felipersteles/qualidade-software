@@ -6,12 +6,24 @@ public class Turma {
     private Media[] medias;
 
     public Turma(Integer qtdAlunos) {
-        this.qtdAlunos = qtdAlunos;
+        if (qtdAlunos > 0 && qtdAlunos <= 10)
+            this.qtdAlunos = qtdAlunos;
+        else {
+            throw new RuntimeException(
+                    "Quantidade máxima de alunos na Turma é 10 e estás tentando criar com " + qtdAlunos + ".");
+        }
+
         this.medias = new Media[qtdAlunos];
     }
 
     public Media[] getMedias() {
         return medias;
+    }
+
+    public Media getAluno(Integer id) {
+        if (medias[id] == null)
+            medias[id] = new Media();
+        return medias[id];
     }
 
     public String getProfessor() {
